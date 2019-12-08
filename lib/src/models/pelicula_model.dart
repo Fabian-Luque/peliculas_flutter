@@ -21,6 +21,9 @@ class Peliculas {
 
 
 class Pelicula {
+
+  String uniqueId;
+
   double popularity;
   int voteCount;
   bool video;
@@ -78,6 +81,16 @@ class Pelicula {
       return 'https://serv1.raiolanetworks.es/blog/wp-content/uploads/error-404-not-found.jpg';
     } else {
       return 'https://image.tmdb.org/t/p/w500/$posterPath';
+    }
+
+  }
+
+  getBackgroundImg() {
+
+    if ( posterPath == null ) {
+      return 'https://serv1.raiolanetworks.es/blog/wp-content/uploads/error-404-not-found.jpg';
+    } else {
+      return 'https://image.tmdb.org/t/p/w500/$backdropPath';
     }
 
   }
